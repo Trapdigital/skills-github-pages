@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrapDigital Tech - Join Us & Contact Us</title>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_aHRd4KMbZbv8NYEKA62lwj6E4a5K2jw"></script>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        h1, h2 {
+            color: #333;
+        }
+
+        /* Landing Header */
+        .landing-header {
+            background-color: #008CBA;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .get-started-btn {
+            background-color: #f2f2f2;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Social Media Icons */
+        .social-media-icons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social-media-icons .icon {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        /* Contact Form */
+        .contact-form-section, .contact-info-section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .send-btn {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        /* Contact Info Box */
+        .contact-box h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact-box p {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        /* Map Section */
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .landing-header h1 {
+                font-size: 24px;
+            }
+            .get-started-btn {
+                font-size: 14px;
+            }
+            .form-group input, .form-group textarea {
+                font-size: 14px;
+            }
+            .contact-box p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Landing Header Section -->
+    <header class="landing-header">
+        <h1>Join Our Tech Tribe!</h1>
+        <p>Transforming your digital chaos into seamless solutions with a smile!</p>
+        <button class="get-started-btn">Get Started</button>
+    </header>
+
+    <!-- Social Media Icons Section -->
+    <section class="social-media-icons">
+        <a href="#" class="icon facebook" target="_blank">Facebook</a>
+        <a href="#" class="icon twitter" target="_blank">X (Twitter)</a>
+        <a href="#" class="icon instagram" target="_blank">Instagram</a>
+        <a href="#" class="icon linkedin" target="_blank">LinkedIn</a>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <h2>Contact Us</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            </div>
+            <div class="form-group">
+                <textarea name="message" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="send-btn">Send it</button>
+        </form>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="contact-box">
+            <h2>Get in Touch</h2>
+            <p><strong>Phone:</strong> +263 77 123 4567</p>
+            <p><strong>WhatsApp:</strong> +263 77 123 4567</p>
+            <p><strong>Email:</strong> info@trapdigitaltech.com</p>
+            <p><strong>Address:</strong> 123 Tech Avenue, Harare, Zimbabwe</p>
+            <p><strong>Working Hours:</strong> Mon-Fri, 9am - 5pm</p>
+        </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section class="map-section">
+        <h2>Find Us Here</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 TrapDigital Tech. All rights reserved.</p>
+    </footer>
+
+    <!-- Initialize Google Map -->
+    <script>
+        function initMap() {
+            // Location coordinates for TrapDigital Tech
+            var location = { lat: -17.8252, lng: 31.0335 }; // Harare, Zimbabwe
+
+            // Create the map
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location,
+                disableDefaultUI: true,
+            });
+
+            // Add a marker to the location
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'TrapDigital Tech',
+            });
+        }
+
+        // Load the map
+        window.onload = initMap;
+    </script>
+</body>
+</html>
